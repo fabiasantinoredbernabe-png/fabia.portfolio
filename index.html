@@ -223,15 +223,14 @@
                             </div>
                             
                             <p class="card-description">Instruction:</p>
-                            <p class="card-description">
-• Carefully analyze the given Java program.
-• Trace the references and memory changes step-by-step.
-• Complete all required tables and questions.
-• Show your logical reasoning where necessary.
-• Write your answers in a yellow paper (handwritten).
-• Take a clear photo or scan of your work.
-• Upload your file in Canvas on or before the deadline.
-• Submission Format: Section_LastName_FirstName_CodeAnalysisActivity#1.pdf </p>
+                            <p class="card-description">• Carefully analyze the given Java program.</p>
+<p class="card-description">• Trace the references and memory changes step-by-step.</p>
+<p class="card-description">• Complete all required tables and questions.</p>
+<p class="card-description">• Show your logical reasoning where necessary.</p>
+<p class="card-description">• Write your answers in a yellow paper (handwritten).</p>
+<p class="card-description">• Take a clear photo or scan of your work.</p>
+<p class="card-description">• Upload your file in Canvas on or before the deadline.</p>
+<p class="card-description">• Submission Format: Section_LastName_FirstName_CodeAnalysisActivity#1.pdf </p>
 
                             <div class="image-preview-container">
                                 <div class="image-preview-wrapper">
@@ -257,17 +256,17 @@
                                 <span class="card-badge">Lesson 2</span>
                             </div>
                             
-                            <p class="card-description">Instructions:
-1.	Create a Java program based on the questions.
-2.	Follow the exact required output shown in the question.
-3.	You must use the specific operator required in each number.
-4.	Do NOT hardcode the final answers (e.g., System.out.println(86); without computation is not allowed).
-5.	Show proper use of variables and correct operator usage.
-6.	Follow proper Java syntax, indentation, and naming conventions.
-7.	Use System.out.println() for displaying output.
-8.	Screenshot the code and the output.
-9.	Compile and run your program to verify correctness before submission.
-10.	Submission Format: Section_LastName_FirstName_OperatorsActivity#2.pdf
+                            <p class="card-description">Instructions:</p>
+<p class="card-description">1.	Create a Java program based on the questions.</p>
+<p class="card-description">2.	Follow the exact required output shown in the question.</p>
+<p class="card-description">3.	You must use the specific operator required in each number.</p>
+<p class="card-description">4.	Do NOT hardcode the final answers (e.g., System.out.println(86); without computation is not allowed).</p>
+<p class="card-description">5.	Show proper use of variables and correct operator usage.</p>
+<p class="card-description">6.	Follow proper Java syntax, indentation, and naming conventions.</p>
+<p class="card-description">7.	Use System.out.println() for displaying output.</p>
+<p class="card-description">8.	Screenshot the code and the output.</p>
+<p class="card-description">9.	Compile and run your program to verify correctness before submission.</p>
+<p class="card-description">10.	Submission Format: Section_LastName_FirstName_OperatorsActivity#2.pdf
 </p>
 
                             <div class="image-preview-container">
@@ -295,94 +294,31 @@
                                 <span class="card-badge">Lesson 3</span>
                             </div>
                 
-                            <p class="card-description">Program Requirements
-1. Create a Java program named ATMWithdrawalLimit.
-2. Assume the initial balance is 9,000 pesos.
-===== ATM MENU =====
-1. Check Balance
-2. Deposit
-3. Withdraw
-4. Exit
-Withdrawal Rules
-Maximum withdrawal per transaction: 3,000 pesos
-If exceeded, display: Withdrawal Limit Exceeded
-Use:
-• if–else statements
-• switch statement
-• do-while loop</p>
+                            <p class="card-description">Program Requirements</p>
+<p class="card-description">1. Create a Java program named ATMWithdrawalLimit.</p>
+<p class="card-description">2. Assume the initial balance is 9,000 pesos.</p>
+<p class="card-description">===== ATM MENU =====</p>
+<p class="card-description">1. Check Balance</p>
+<p class="card-description">2. Deposit</p>
+<p class="card-description">3. Withdraw</p>
+<p class="card-description">4. Exit</p>
+<p class="card-description">Withdrawal Rules</p>
+<p class="card-description">Maximum withdrawal per transaction: 3,000 pesos</p>
+<p class="card-description">If exceeded, display: Withdrawal Limit Exceeded</p>
+<p class="card-description">Use:</p>
+<p class="card-description">• if–else statements</p>
+<p class="card-description">• switch statement</p>
+<p class="card-description">• do-while loop</p>
                     </div>
-
-<div
-                            <div class="code-display-box">
-                                <div class="code-header">
-                                    <span class="code-filename">ATMWithdrawalLimit.java</span>
-                                    <button type="button" class="copy-btn" aria-label="Copy code">
-                                        <span class="copy-text">Copy</span>
-                                    </button>
+<!--pic--->
+					<div class="image-preview-container">
+                                <div class="image-preview-wrapper">
+                                    <img src="MAC2p1.png" class="image-preview" alt="Assignment preview">
+                                </div>
+                                <div class="image-preview-wrapper">
+                                    <img src="MAC2p2.png" class="image-preview" alt="Assignment preview">
                                 </div>
                             </div>
-                            <div
-                                <pre><code class="code-content">public static void main(String[] args) {
-		 Scanner scanner = new Scanner(System.in);
-
-	        double balance = 9000;
-	        int choice;
-	        double amount;
-
-	        do {
-	            System.out.println("\n===== ATM MENU =====");
-	            System.out.println("1. Check Balance");
-	            System.out.println("2. Deposit");
-	            System.out.println("3. Withdraw");
-	            System.out.println("4. Exit");
-	            System.out.print("Enter your choice: ");
-	            choice = scanner.nextInt();
-
-	            switch (choice) {
-	                case 1:
-	                    System.out.println("Current Balance: " + balance + " pesos");
-	                    break;
-
-	                case 2:
-	                    System.out.print("Enter amount to deposit: ");
-	                    amount = scanner.nextDouble();
-	                    balance += amount;
-	                    System.out.println("Deposit successful!");
-	                    break;
-
-	                case 3:
-	                    System.out.print("Enter amount to withdraw: ");
-	                    amount = scanner.nextDouble();
-
-	                    if (amount > 3000) {
-	                        System.out.println("Withdrawal Limit Exceeded");
-	                    } else if (amount > balance) {
-	                        System.out.println("Insufficient Balance");
-	                    } else {
-	                        balance -= amount;
-	                        System.out.println("Withdrawal successful!");
-	                    }
-	                    break;
-
-	                case 4:
-	                    System.out.println("Thank you for using the ATM!");
-	                    break;
-
-	                default:
-	                    System.out.println("Invalid choice. Try again.");
-	            }
-
-	        } while (choice != 4);
-
-	        scanner.close();
-	    }
-	}
-
-}</code></pre>
-                            </div>
-                        </article>
-                    </div>
-                </div>
                     
                     <div
                             <div class="explanation-box">
@@ -403,181 +339,68 @@ Use:
                                 <span class="card-badge">Lesson 4</span>
                             </div>
                             
-                            <p class="card-description">Objective
-Create a Java program that simulates a student payment system using decision structures,
-loops, and user-defined validation.
-Program Requirements
-1. Create a Java program named:
-StudentPaymentSystemLastName
-(Example: StudentPaymentSystemBedis)
-2. Ask the user to input:
-o Student Name
-o Student ID
-o Total Tuition Fee
-3. Display the menu:
-===== PAYMENT MENU =====
-1. Pay Tuition
-2. Check Balance
-3. Apply Discount
-4. Exit
-Program Rules
-General Rules
-• Use switch statement to process menu options
-• Use do-while loop to repeat the program until Exit
-• Use nested if statements for validation
-• Use a counter variable to track number of transactions
-Payment Rules
-1. Pay Tuition
-• Ask for payment amount
-• Validate:
-o If payment > remaining balance → display: Invalid Payment
-o Else → deduct from balance
-• Increment transaction counter
-2. Check Balance
-• Display remaining balance
-• Increment transaction counter
-3. Apply Discount
-• Ask user if they are:
-o Regular Student
-o Scholar
-Conditions:
-• If Scholar → 20% discount
-• If Regular → no discount
-• Discount applies only once
-4. Exit
-• Display:
-o Student Name
-o Total Transactions
-o Final Balance
-• End program
-Additional Conditions
-• Prevent negative balance
-• Prevent multiple discount applications
-• Show message: No remaining balance if fully paid</p>
+                            <p class="card-description">Objective</p>
+<p class="card-description">Create a Java program that simulates a student payment system using decision structures,</p>
+<p class="card-description">loops, and user-defined validation.</p>
+<p class="card-description">Program Requirements</p>
+<p class="card-description">1. Create a Java program named:</p>
+<p class="card-description">StudentPaymentSystemLastName</p>
+<p class="card-description">(Example: StudentPaymentSystemBedis)</p>
+<p class="card-description">2. Ask the user to input:</p>
+<p class="card-description">o Student Name</p>
+<p class="card-description">o Student ID</p>
+<p class="card-description">o Total Tuition Fee</p>
+<p class="card-description">3. Display the menu:</p>
+<p class="card-description">===== PAYMENT MENU =====</p>
+<p class="card-description">1. Pay Tuition</p>
+<p class="card-description">2. Check Balance</p>
+<p class="card-description">3. Apply Discount</p>
+<p class="card-description">4. Exit</p>
+<p class="card-description">Program Rules</p>
+<p class="card-description">General Rules</p>
+<p class="card-description">• Use switch statement to process menu options</p>
+<p class="card-description">• Use do-while loop to repeat the program until Exit</p>
+<p class="card-description">• Use nested if statements for validation</p>
+<p class="card-description">• Use a counter variable to track number of transactions</p>
+<p class="card-description">Payment Rules</p>
+<p class="card-description">1. Pay Tuition</p>
+<p class="card-description">• Ask for payment amount</p>
+<p class="card-description">• Validate:</p>
+<p class="card-description">o If payment > remaining balance → display: Invalid Payment</p>
+<p class="card-description">o Else → deduct from balance</p>
+<p class="card-description">• Increment transaction counter</p>
+<p class="card-description">2. Check Balance</p>
+<p class="card-description">• Display remaining balance</p>
+<p class="card-description">• Increment transaction counter</p>
+<p class="card-description">3. Apply Discount</p>
+<p class="card-description">• Ask user if they are:</p>
+<p class="card-description">o Regular Student</p>
+<p class="card-description">o Scholar</p>
+<p class="card-description">Conditions:</p>
+<p class="card-description">• If Scholar → 20% discount</p>
+<p class="card-description">• If Regular → no discount</p>
+<p class="card-description">• Discount applies only once</p>
+<p class="card-description">4. Exit</p>
+<p class="card-description">• Display:</p>
+<p class="card-description">o Student Name</p>
+<p class="card-description">o Total Transactions</p>
+<p class="card-description">o Final Balance</p>
+<p class="card-description">• End program</p>
+<p class="card-description">Additional Conditions</p>
+<p class="card-description">• Prevent negative balance</p>
+<p class="card-description">• Prevent multiple discount applications</p>
+<p class="card-description">• Show message: No remaining balance if fully paid</p>
                         </div>
 
-<div
-                            <div class="code-display-box">
-                                <div class="code-header">
-                                    <span class="code-filename">StudentPaymentSystemFabia.java</span>
-                                    <button type="button" class="copy-btn" aria-label="Copy code">
-                                        <span class="copy-text">Copy</span>
-                                    </button>
+							<!--pic--->
+					<div class="image-preview-container">
+                                <div class="image-preview-wrapper">
+                                    <img src="MAC2p1.png" class="image-preview" alt="Assignment preview">
+                                </div>
+                                <div class="image-preview-wrapper">
+                                    <img src="MAC2p2.png" class="image-preview" alt="Assignment preview">
                                 </div>
                             </div>
-                            <div
-                                <pre><code class="code-content">	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter Student Name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Enter Student ID: ");
-        String id = sc.nextLine();
-
-        System.out.print("Enter Total Tuition Fee: ");
-        double tuition = sc.nextDouble();
-
-        double balance = tuition;
-        int choice;
-        int transactionCount = 0;
-        boolean discountApplied = false;
-
-        do {
-            System.out.println("\n===== PAYMENT MENU =====");
-            System.out.println("1. Pay Tuition");
-            System.out.println("2. Check Balance");
-            System.out.println("3. Apply Discount");
-            System.out.println("4. Exit");
-            System.out.print("Enter choice: ");
-            choice = sc.nextInt();
-
-            switch (choice) {
-
-                case 1:
-                    if (balance <= 0) {
-                        System.out.println("No remaining balance.");
-                        break;
-                    }
-
-                    System.out.print("Enter payment amount: ");
-                    double payment = sc.nextDouble();
-
-                    if (payment > balance) {
-                        System.out.println("Invalid Payment");
-                    } else if (payment <= 0) {
-                        System.out.println("Invalid Payment");
-                    } else {
-                        balance -= payment;
-                        System.out.println("Payment successful!");
-                        System.out.println("Remaining Balance: " + balance);
-                    }
-
-                    transactionCount++;
-                    break;
-
-                case 2:
-                    if (balance <= 0) {
-                        System.out.println("No remaining balance.");
-                    } else {
-                        System.out.println("Remaining Balance: " + balance);
-                    }
-
-                    transactionCount++;
-                    break;
-
-                case 3:
-                    if (discountApplied) {
-                        System.out.println("Discount already applied!");
-                        break;
-                    }
-
-                    sc.nextLine();
-                    System.out.print("Enter type (Regular/Scholar): ");
-                    String type = sc.nextLine();
-
-                    if (type.equalsIgnoreCase("Scholar")) {
-                        double discount = balance * 0.20;
-                        balance -= discount;
-                        discountApplied = true;
-                        System.out.println("20% discount applied!");
-                        System.out.println("New Balance: " + balance);
-                    } else if (type.equalsIgnoreCase("Regular")) {
-                        System.out.println("No discount for regular students.");
-                        discountApplied = true;
-                    } else {
-                        System.out.println("Invalid input.");
-                    }
-
-                    transactionCount++;
-                    break;
-
-                case 4:
-                    System.out.println("\n===== FINAL SUMMARY =====");
-                    System.out.println("Student Name: " + name);
-                    System.out.println("Student ID: " + id);
-                    System.out.println("Total Transactions: " + transactionCount);
-                    System.out.println("Final Balance: " + balance);
-                    System.out.println("Program Ended.");
-                    break;
-
-                default:
-                    System.out.println("Invalid choice. Try again.");
-            }
-
-        } while (choice != 4);
-
-        sc.close();
-	}
-}
-                    </code>
-                    </pre>
-                            
-                    
-                </div>
-                        </article>
-                    </div>
-                </div>
                             
                             <div
                             <div class="explanation-box">
@@ -598,109 +421,41 @@ Additional Conditions
                                 <span class="card-badge">Lesson 5</span>
                             </div>
                             
-                            <p class="card-description">Instructions
-1. Create a Java program named ExpenseTrackerLastName.
-2. Implement the following methods:
-o A void method that displays the program title.
-o A non-void method that calculates the total expenses using three values:
-▪ food
-▪ transportation
-▪ other expenses
-o A non-void method that checks if the total expense exceeds a budget and returns a
-message.
-o A void method that displays the total expense and the budget status.
-3. In the main method:
-o Call all the methods you created.
-o Display the final output clearly.
-4. Use appropriate method names, parameters, and return types.
-5. Add at least TWO enhancement:
-o Accept user input
-o Add another expense category
-o Compute remaining budget
-o Display a personalized message
-6. Ensure your program:
-o Compiles without errors
-o Produces correct output
+                            <p class="card-description">Instructions</p>
+<p class="card-description">1. Create a Java program named ExpenseTrackerLastName.</p>
+<p class="card-description">2. Implement the following methods:</p>
+<p class="card-description">o A void method that displays the program title.</p>
+<p class="card-description">o A non-void method that calculates the total expenses using three values:</p>
+<p class="card-description">▪ food</p>
+<p class="card-description">▪ transportation</p>
+<p class="card-description">▪ other expenses</p>
+<p class="card-description">o A non-void method that checks if the total expense exceeds a budget and returns a</p>
+<p class="card-description">message.</p>
+<p class="card-description">o A void method that displays the total expense and the budget status.</p>
+<p class="card-description">3. In the main method:</p>
+<p class="card-description">o Call all the methods you created.</p>
+<p class="card-description">o Display the final output clearly.</p>
+<p class="card-description">4. Use appropriate method names, parameters, and return types.</p>
+<p class="card-description">5. Add at least TWO enhancement:</p>
+<p class="card-description">o Accept user input</p>
+<p class="card-description">o Add another expense category</p>
+<p class="card-description">o Compute remaining budget</p>
+<p class="card-description">o Display a personalized message</p>
+<p class="card-description">6. Ensure your program:</p>
+<p class="card-description">o Compiles without errors</p>
+<p class="card-description">o Produces correct output
 </p>
                         </div>
 
-<div
-                            <div class="code-display-box">
-                                <div class="code-header">
-                                    <span class="code-filename">ExpenseTrackerFabia.java</span>
-                                    <button type="button" class="copy-btn" aria-label="Copy code">
-                                        <span class="copy-text">Copy</span>
-                                    </button>
+							<!--pic--->
+					<div class="image-preview-container">
+                                <div class="image-preview-wrapper">
+                                    <img src="MAC2p1.png" class="image-preview" alt="Assignment preview">
+                                </div>
+                                <div class="image-preview-wrapper">
+                                    <img src="MAC2p2.png" class="image-preview" alt="Assignment preview">
                                 </div>
                             </div>
-                            <div
-                                <pre><code class="code-content">public class ExpenseTrackerFabia {
-
-    public static void displayTitle() {
-        System.out.println("=== Personal Expense Tracker ===");
-    }
-
-    public static double calculateTotalExpenses(double food, double transportation, double other, double entertainment) {
-        return food + transportation + other + entertainment;
-    }
-
-    public static String checkBudget(double totalExpense, double budget) {
-        if (totalExpense > budget) {
-            return "You have exceeded your budget.";
-        } else if (totalExpense == budget) {
-            return "You have exactly met your budget.";
-        } else {
-            return "You are within your budget.";
-        }
-    }
-
-    public static void displayExpenseStatus(double totalExpense, double budget, String budgetStatus, double remainingBudget) {
-        System.out.printf("Total Expenses: $%.2f%n", totalExpense);
-        System.out.printf("Budget: $%.2f%n", budget);
-        System.out.println("Budget Status: " + budgetStatus);
-        System.out.printf("Remaining Budget: $%.2f%n", remainingBudget);
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        displayTitle();
-
-        System.out.print("Enter your budget: $");
-        double budget = scanner.nextDouble();
-
-        System.out.print("Enter your food expenses: $");
-        double food = scanner.nextDouble();
-
-        System.out.print("Enter your transportation expenses: $");
-        double transportation = scanner.nextDouble();
-
-        System.out.print("Enter your other expenses: $");
-        double other = scanner.nextDouble();
-
-        System.out.print("Enter your entertainment expenses: $");
-        double entertainment = scanner.nextDouble();
-
-        double totalExpense = calculateTotalExpenses(food, transportation, other, entertainment);
-        String budgetStatus = checkBudget(totalExpense, budget);
-        double remainingBudget = budget - totalExpense;
-
-        displayExpenseStatus(totalExpense, budget, budgetStatus, remainingBudget);
-
-        if (remainingBudget > 0) {
-            System.out.println("Great job managing your expenses! Keep it up!");
-        } else {
-            System.out.println("Try to reduce your expenses next time to stay within budget.");
-        }
-
-        scanner.close();
-    }
-}
-}</code></pre>
-                            </div>
-                        </article>
-                    </div>
-                </div>
                             
                             <div
                             <div class="explanation-box">
@@ -714,52 +469,6 @@ o Produces correct output
                             </div
                         </article>
 
-                        <!-- Source Code Display Card -->
-                        <article class="card card-activity">
-                            <div
-                            <div class="card-header">
-                                <h3 class="card-title">Source Code Reference</h3>
-                                <span class="card-badge">Code Snippet</span>
-                            </div>
-                            
-                            <p class="card-description">View and reference sample implementations from OOP activities:</p>
-                        </div>
-                            <div
-                            <div class="code-display-box">
-                                <div class="code-header">
-                                    <span class="code-filename">Example.java</span>
-                                    <button type="button" class="copy-btn" aria-label="Copy code">
-                                        <span class="copy-text">Copy</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div
-                                <pre><code class="code-content">public class ATMSystem {
-    private double balance;
-    private String accountHolder;
-    
-    public ATMSystem(String name, double initialBalance) {
-        this.accountHolder = name;
-        this.balance = initialBalance;
-    }
-    
-    public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
-            System.out.println("Withdrawal successful!");
-        } else {
-            System.out.println("Insufficient funds.");
-        }
-    }
-    
-    public double getBalance() {
-        return balance;
-    }
-}</code></pre>
-                            </div>
-                        </article>
-                    </div>
-                </div>
     </section>
                 <!-- Exam Tab -->
                 <div id="exam" class="tab-content" role="tabpanel" aria-labelledby="exam">
