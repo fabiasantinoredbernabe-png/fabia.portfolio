@@ -946,7 +946,7 @@ code {
 }
 
 /* ========================================
-   SOURCE CODE DISPLAY BOX (NEW)
+   SOURCE CODE DISPLAY BOX
    ======================================== */
 .code-display-box {
     margin: var(--space-2xl) 0;
