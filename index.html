@@ -243,12 +243,9 @@
                             </div>
                             
                             <div class="explanation-box">
-                                <h4>Learning Outcomes</h4>
+                                <h4>Reflection</h4>
                                 <ul class="concept-list">
-                                    <li>Implemented <strong>encapsulation</strong> with private fields</li>
-                                    <li>Applied <strong>input validation</strong> for data integrity</li>
-                                    <li>Used <strong>constructors</strong> for initialization</li>
-                                    <li>Demonstrated <strong>state management</strong> with balance tracking</li>
+                                    <li>Implemented <strong>Learning about variables in OOP made me realize how important they are in organizing data inside a program. I learned that variables inside a class (fields or attributes) represent the state of an object, and they help define what an object “knows” about itself.</strong></li>
                                 </ul>
                             </div>
                         </article>
@@ -260,7 +257,8 @@
                                 <span class="card-badge">Lesson 2</span>
                             </div>
                             
-                            <p class="card-description">1.	Create a Java program based on the questions.
+                            <p class="card-description">Instructions:
+1.	Create a Java program based on the questions.
 2.	Follow the exact required output shown in the question.
 3.	You must use the specific operator required in each number.
 4.	Do NOT hardcode the final answers (e.g., System.out.println(86); without computation is not allowed).
@@ -282,11 +280,9 @@
                             </div>
                          
                             <div class="explanation-box">
-                                <h4>Learning Outcomes</h4>
+                                <h4>Reflections</h4>
                                 <ul class="concept-list">
-                                    <li>Used <strong>if-else chains</strong> for range-based decisions</li>
-                                    <li>Applied <strong>switch statements</strong> for discrete values</li>
-                                    <li>Combined multiple methods for modular design</li>
+                                    <li>Used <strong>In this lesson about operators in Java within Object-Oriented Programming, I learned how different types of operators such as arithmetic, relational, logical, and assignment operators are used to perform operations on variables and control program flow. I realized that operators are essential in implementing logic inside methods and classes, making programs more dynamic and functional.</strong></li>
                                 </ul>
                             </div>
                         </article>
@@ -299,15 +295,101 @@
                                 <span class="card-badge">Lesson 3</span>
                             </div>
                 
-                            <p class="card-description">Demonstrating method overloading with multiple parameter signatures and static methods.</p>
+                            <p class="card-description">Program Requirements
+1. Create a Java program named ATMWithdrawalLimit.
+2. Assume the initial balance is 9,000 pesos.
+===== ATM MENU =====
+1. Check Balance
+2. Deposit
+3. Withdraw
+4. Exit
+Withdrawal Rules
+Maximum withdrawal per transaction: 3,000 pesos
+If exceeded, display: Withdrawal Limit Exceeded
+Use:
+• if–else statements
+• switch statement
+• do-while loop</p>
                     </div>
+
+<div
+                            <div class="code-display-box">
+                                <div class="code-header">
+                                    <span class="code-filename">ATMWithdrawalLimit.java</span>
+                                    <button type="button" class="copy-btn" aria-label="Copy code">
+                                        <span class="copy-text">Copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                <pre><code class="code-content">public static void main(String[] args) {
+		 Scanner scanner = new Scanner(System.in);
+
+	        double balance = 9000;
+	        int choice;
+	        double amount;
+
+	        do {
+	            System.out.println("\n===== ATM MENU =====");
+	            System.out.println("1. Check Balance");
+	            System.out.println("2. Deposit");
+	            System.out.println("3. Withdraw");
+	            System.out.println("4. Exit");
+	            System.out.print("Enter your choice: ");
+	            choice = scanner.nextInt();
+
+	            switch (choice) {
+	                case 1:
+	                    System.out.println("Current Balance: " + balance + " pesos");
+	                    break;
+
+	                case 2:
+	                    System.out.print("Enter amount to deposit: ");
+	                    amount = scanner.nextDouble();
+	                    balance += amount;
+	                    System.out.println("Deposit successful!");
+	                    break;
+
+	                case 3:
+	                    System.out.print("Enter amount to withdraw: ");
+	                    amount = scanner.nextDouble();
+
+	                    if (amount > 3000) {
+	                        System.out.println("Withdrawal Limit Exceeded");
+	                    } else if (amount > balance) {
+	                        System.out.println("Insufficient Balance");
+	                    } else {
+	                        balance -= amount;
+	                        System.out.println("Withdrawal successful!");
+	                    }
+	                    break;
+
+	                case 4:
+	                    System.out.println("Thank you for using the ATM!");
+	                    break;
+
+	                default:
+	                    System.out.println("Invalid choice. Try again.");
+	            }
+
+	        } while (choice != 4);
+
+	        scanner.close();
+	    }
+	}
+
+}</code></pre>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                    
                     <div
                             <div class="explanation-box">
-                                <h4>Learning Outcomes</h4>
+                                <h4>Reflections</h4>
                                 <ul class="concept-list">
-                                    <li><strong>Method overloading</strong> enables same name, different params</li>
-                                    <li><strong>Static methods</strong> belong to class, not instances</li>
-                                    <li>Array processing and computed return values</li>
+                                    <li><strong>In this lesson, I learned how control flow statements like if–else, switch, and do-while loops help manage the behavior of a Java program. The if–else statement allows me to make decisions based on conditions, while the switch statement provides a cleaner way to handle multiple possible values of a variable. I also learned that the do-while loop ensures that a block of code runs at least once before checking the condition, which is useful in certain situations. Overall, these concepts improved my understanding of how to control the flow of execution and make programs more interactive and logical.</strong></li>
+                                
                                 </ul>
                             </div>
                 </div>
@@ -321,15 +403,188 @@
                                 <span class="card-badge">Lesson 4</span>
                             </div>
                             
-                            <p class="card-description">Working with string objects, methods, and immutability in Java applications.</p>
+                            <p class="card-description">Objective
+Create a Java program that simulates a student payment system using decision structures,
+loops, and user-defined validation.
+Program Requirements
+1. Create a Java program named:
+StudentPaymentSystemLastName
+(Example: StudentPaymentSystemBedis)
+2. Ask the user to input:
+o Student Name
+o Student ID
+o Total Tuition Fee
+3. Display the menu:
+===== PAYMENT MENU =====
+1. Pay Tuition
+2. Check Balance
+3. Apply Discount
+4. Exit
+Program Rules
+General Rules
+• Use switch statement to process menu options
+• Use do-while loop to repeat the program until Exit
+• Use nested if statements for validation
+• Use a counter variable to track number of transactions
+Payment Rules
+1. Pay Tuition
+• Ask for payment amount
+• Validate:
+o If payment > remaining balance → display: Invalid Payment
+o Else → deduct from balance
+• Increment transaction counter
+2. Check Balance
+• Display remaining balance
+• Increment transaction counter
+3. Apply Discount
+• Ask user if they are:
+o Regular Student
+o Scholar
+Conditions:
+• If Scholar → 20% discount
+• If Regular → no discount
+• Discount applies only once
+4. Exit
+• Display:
+o Student Name
+o Total Transactions
+o Final Balance
+• End program
+Additional Conditions
+• Prevent negative balance
+• Prevent multiple discount applications
+• Show message: No remaining balance if fully paid</p>
                         </div>
+
+<div
+                            <div class="code-display-box">
+                                <div class="code-header">
+                                    <span class="code-filename">StudentPaymentSystemFabia.java</span>
+                                    <button type="button" class="copy-btn" aria-label="Copy code">
+                                        <span class="copy-text">Copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                <pre><code class="code-content">	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Student Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Student ID: ");
+        String id = sc.nextLine();
+
+        System.out.print("Enter Total Tuition Fee: ");
+        double tuition = sc.nextDouble();
+
+        double balance = tuition;
+        int choice;
+        int transactionCount = 0;
+        boolean discountApplied = false;
+
+        do {
+            System.out.println("\n===== PAYMENT MENU =====");
+            System.out.println("1. Pay Tuition");
+            System.out.println("2. Check Balance");
+            System.out.println("3. Apply Discount");
+            System.out.println("4. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    if (balance <= 0) {
+                        System.out.println("No remaining balance.");
+                        break;
+                    }
+
+                    System.out.print("Enter payment amount: ");
+                    double payment = sc.nextDouble();
+
+                    if (payment > balance) {
+                        System.out.println("Invalid Payment");
+                    } else if (payment <= 0) {
+                        System.out.println("Invalid Payment");
+                    } else {
+                        balance -= payment;
+                        System.out.println("Payment successful!");
+                        System.out.println("Remaining Balance: " + balance);
+                    }
+
+                    transactionCount++;
+                    break;
+
+                case 2:
+                    if (balance <= 0) {
+                        System.out.println("No remaining balance.");
+                    } else {
+                        System.out.println("Remaining Balance: " + balance);
+                    }
+
+                    transactionCount++;
+                    break;
+
+                case 3:
+                    if (discountApplied) {
+                        System.out.println("Discount already applied!");
+                        break;
+                    }
+
+                    sc.nextLine();
+                    System.out.print("Enter type (Regular/Scholar): ");
+                    String type = sc.nextLine();
+
+                    if (type.equalsIgnoreCase("Scholar")) {
+                        double discount = balance * 0.20;
+                        balance -= discount;
+                        discountApplied = true;
+                        System.out.println("20% discount applied!");
+                        System.out.println("New Balance: " + balance);
+                    } else if (type.equalsIgnoreCase("Regular")) {
+                        System.out.println("No discount for regular students.");
+                        discountApplied = true;
+                    } else {
+                        System.out.println("Invalid input.");
+                    }
+
+                    transactionCount++;
+                    break;
+
+                case 4:
+                    System.out.println("\n===== FINAL SUMMARY =====");
+                    System.out.println("Student Name: " + name);
+                    System.out.println("Student ID: " + id);
+                    System.out.println("Total Transactions: " + transactionCount);
+                    System.out.println("Final Balance: " + balance);
+                    System.out.println("Program Ended.");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+
+        } while (choice != 4);
+
+        sc.close();
+	}
+}
+                    </code>
+                    </pre>
+                            
+                    
+                </div>
+                        </article>
+                    </div>
+                </div>
+                            
                             <div
                             <div class="explanation-box">
-                                <h4>Learning Outcomes</h4>
+                                <h4>Reflections</h4>
                                 <ul class="concept-list">
-                                    <li><strong>String immutability:</strong> Understanding String behavior in memory</li>
-                                    <li><strong>Built-in methods:</strong> charAt, substring, length operations</li>
-                                    <li><strong>String comparison:</strong> equals() vs compareTo()</li>
+                                    <li><strong>In this lesson, I learned how to combine different control structures to create a more functional and user-friendly payment system program. Using a switch statement to process menu options made the program more organized and easier to manage. The do-while loop helped ensure that the program continues running until the user chooses to exit, making it more interactive. I also understood how nested if statements are useful for validating user input and handling different conditions properly. Additionally, using a counter variable allowed me to track the number of transactions, which adds more control and monitoring to the program. Overall, this lesson strengthened my ability to design structured and efficient programs.</strong></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -343,8 +598,110 @@
                                 <span class="card-badge">Lesson 5</span>
                             </div>
                             
-                            <p class="card-description">Implementing try-catch-finally blocks and custom exception scenarios.</p>
+                            <p class="card-description">Instructions
+1. Create a Java program named ExpenseTrackerLastName.
+2. Implement the following methods:
+o A void method that displays the program title.
+o A non-void method that calculates the total expenses using three values:
+▪ food
+▪ transportation
+▪ other expenses
+o A non-void method that checks if the total expense exceeds a budget and returns a
+message.
+o A void method that displays the total expense and the budget status.
+3. In the main method:
+o Call all the methods you created.
+o Display the final output clearly.
+4. Use appropriate method names, parameters, and return types.
+5. Add at least TWO enhancement:
+o Accept user input
+o Add another expense category
+o Compute remaining budget
+o Display a personalized message
+6. Ensure your program:
+o Compiles without errors
+o Produces correct output
+</p>
                         </div>
+
+<div
+                            <div class="code-display-box">
+                                <div class="code-header">
+                                    <span class="code-filename">ExpenseTrackerFabia.java</span>
+                                    <button type="button" class="copy-btn" aria-label="Copy code">
+                                        <span class="copy-text">Copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                <pre><code class="code-content">public class ExpenseTrackerFabia {
+
+    public static void displayTitle() {
+        System.out.println("=== Personal Expense Tracker ===");
+    }
+
+    public static double calculateTotalExpenses(double food, double transportation, double other, double entertainment) {
+        return food + transportation + other + entertainment;
+    }
+
+    public static String checkBudget(double totalExpense, double budget) {
+        if (totalExpense > budget) {
+            return "You have exceeded your budget.";
+        } else if (totalExpense == budget) {
+            return "You have exactly met your budget.";
+        } else {
+            return "You are within your budget.";
+        }
+    }
+
+    public static void displayExpenseStatus(double totalExpense, double budget, String budgetStatus, double remainingBudget) {
+        System.out.printf("Total Expenses: $%.2f%n", totalExpense);
+        System.out.printf("Budget: $%.2f%n", budget);
+        System.out.println("Budget Status: " + budgetStatus);
+        System.out.printf("Remaining Budget: $%.2f%n", remainingBudget);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        displayTitle();
+
+        System.out.print("Enter your budget: $");
+        double budget = scanner.nextDouble();
+
+        System.out.print("Enter your food expenses: $");
+        double food = scanner.nextDouble();
+
+        System.out.print("Enter your transportation expenses: $");
+        double transportation = scanner.nextDouble();
+
+        System.out.print("Enter your other expenses: $");
+        double other = scanner.nextDouble();
+
+        System.out.print("Enter your entertainment expenses: $");
+        double entertainment = scanner.nextDouble();
+
+        double totalExpense = calculateTotalExpenses(food, transportation, other, entertainment);
+        String budgetStatus = checkBudget(totalExpense, budget);
+        double remainingBudget = budget - totalExpense;
+
+        displayExpenseStatus(totalExpense, budget, budgetStatus, remainingBudget);
+
+        if (remainingBudget > 0) {
+            System.out.println("Great job managing your expenses! Keep it up!");
+        } else {
+            System.out.println("Try to reduce your expenses next time to stay within budget.");
+        }
+
+        scanner.close();
+    }
+}
+}</code></pre>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                            
                             <div
                             <div class="explanation-box">
                                 <h4>Learning Outcomes</h4>
